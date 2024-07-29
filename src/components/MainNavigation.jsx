@@ -1,18 +1,3 @@
- 
-//  import { AppBar} from "@mui/material";
-// import Box from "@mui/material";
-
-// function MainNavigation() {
-//   return (
-//      <Box sx={{flexGrow:1}}>
-//    <AppBar>
-//     <p>hiii</p>
-//    </AppBar>
-//      </Box>
-//   )
-// }
-
-// export default MainNavigation
 
 import { NavLink } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
