@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../Api";
-import { Card, Typography } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 import DetailComponent from "../components/DetailComponent";
 
