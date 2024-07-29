@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import api from "../Api";
 import { useState } from "react";
-import { Box, Card, ImageList, Typography } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import CircularProgress from "@mui/material/CircularProgress";
 function PetList() {
   const [data, setData] = useState([]);
 
@@ -22,8 +22,12 @@ function PetList() {
     request();
   }, []);
 
+  if (!data) {
+    return <CircularProgress />;
+  }
+
   return (
-    <Box sx={{marginTop:"50px"}}>
+    <Box sx={{ marginTop: "50px" }}>
       <Typography>Click to view the details</Typography>
       <ul>
         {Array.isArray(data) &&
@@ -50,7 +54,9 @@ function PetList() {
                       }}
                     />
                   </div>
-                  <Typography variant="subtitle1" sx={{ marginLeft: '16px' }}>Name: {element.name}</Typography>
+                  <Typography variant="subtitle1" sx={{ marginLeft: "16px" }}>
+                    Name: {element.name}
+                  </Typography>
                 </Card>
               </Link>
             </li>
